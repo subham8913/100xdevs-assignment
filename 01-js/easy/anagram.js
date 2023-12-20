@@ -5,6 +5,12 @@
 */
 
 function isAnagram(str1, str2) {
+ cleanstr1=str1.replace(/\s/g,'').toLowerCase();
+ cleanstr2=str2.replace(/\s/g,'').toLowerCase();
+ str1=cleanstr1.split('').sort().join('');
+ str2=cleanstr2.split('').sort().join('');
+return str1=== str2;
+  
 
 }
 

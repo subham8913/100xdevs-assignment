@@ -4,7 +4,15 @@
 */
 
 function isPalindrome(str) {
+  str=str.replace(/[^\w]/g,'').toLowerCase();
+  
+  let i=0;
+  let j=str.length-1;
+  while(i<j){
+   if(str[i++]!=str[j--])return false;
+  }
   return true;
 }
+isPalindrome('Eva, can I see bees in a cave?')
 
 module.exports = isPalindrome;
